@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adamas University SGPA-CGPA Calculator */
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 200 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 15%;
+
+    --primary: 197 94% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 40% 96%;
+    --secondary-foreground: 200 30% 15%;
+
+    --muted: 200 20% 94%;
+    --muted-foreground: 200 15% 45%;
+
+    --accent: 197 60% 92%;
+    --accent-foreground: 197 80% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 88%;
+    --input: 200 20% 88%;
+    --ring: 197 94% 44%;
+
+    --radius: 0.5rem;
+
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 197 94% 44%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 197 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 197 70% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 197 70% 50%;
+    --sidebar-ring: 197 94% 60%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 20% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 20% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 197 85% 50%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 197 50% 22%;
+    --accent-foreground: 197 70% 70%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 197 85% 50%;
+
+    --success: 160 60% 40%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 80% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 197 85% 50%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 197 40% 18%;
+    --sidebar-accent-foreground: 197 70% 70%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 197 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-header {
+    background: hsl(197 94% 44%);
+  }
+  
+  .dark .gradient-header {
+    background: hsl(220 20% 13%);
+    border-bottom: 1px solid hsl(220 15% 22%);
+  }
+
+  .header-text {
+    @apply text-white;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .transition-base {
+    @apply transition-all duration-200 ease-out;
+  }
+}
